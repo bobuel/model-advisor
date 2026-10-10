@@ -12,8 +12,9 @@ The first harness is Codex: seven observed models and 40 model–effort combinat
 
 ## Evidence as of October 10, 2026
 
-- 127 local tests pass, including 48 task/priority HTTP journeys, a real MCP client, supported combinations, durable quotas and maintenance failures. These controlled provider fixtures test integration, not routing quality.
-- Six real Liquid calls through the packaged client and local service returned provisional recommendations: five Sol 6.1/medium, one Sol 6.1/low. That concentration needs outcome evaluation; no superiority is established.
+- 136 local tests pass, including 48 task/priority HTTP journeys, a real MCP client, research provenance, the actual LangChain graph with a scripted model, durable quotas and maintenance failures. These controlled provider fixtures test integration, not routing quality.
+- Knowledge version 2026-10-10.2 contains six reviewed findings from official model guidance, with section citations, retrieval date and content hash. These findings now enter the decision payload and returned advice. Catalog availability alone cannot justify a recommendation.
+- Six real Liquid calls through the packaged client and local service returned provisional recommendations: five Sol 6.1/medium, one Sol 6.1/low. These predate the new research payload. That payload still needs live routing and outcome evaluation; no superiority is established.
 - Earlier coding runs: six synthetic tasks, Astra/high 6/6, Sol 6.1/low 6/6, Luna/low 5/6. These are code-only observations, not tool-using project results.
 - The broader synthetic suite has 36 tasks and 154 checks. All reference controls pass and 72 broken controls are rejected; only six tasks have live model runs.
 
@@ -43,7 +44,7 @@ The installed pilot and this source package are different releases. Publishing a
 
 ## Maintenance and privacy
 
-GitHub's source watcher checks official model, pricing and decision-model pages twice daily. Reports require research review; the checker never silently changes facts or extends freshness. Follow [the maintainer workflow](maintenance/REVIEW.md). The service uses a pinned knowledge snapshot.
+GitHub's source watcher checks official model, pricing and decision-model pages twice daily. The existing Codex heartbeat researches substantive changes and follows [the maintainer workflow](maintenance/REVIEW.md). The [LangChain research implementation](maintenance/RESEARCH.md) discovers and reads primary sources and produces a draft for separate review; its live model/search adapters are not yet configured. The first report was researched using Codex web tools. A fetch never silently changes facts or extends freshness. The service uses a pinned knowledge snapshot.
 
 Only synthetic tasks and sanitized summaries belong in this public repo. Do not send secrets or private code in a task summary. The application does not persist request bodies; it uses a five-minute memory cache and a durable date/count quota journal. Requests needing a decision are sent to Liquid. Hosting and provider retention apply separately. Credentials, local inventory, raw traces and runtime databases are excluded from Git and the Docker build.
 

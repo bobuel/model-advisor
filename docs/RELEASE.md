@@ -1,6 +1,8 @@
 # 0.2.0 candidate status
 
-Built and locally verified: shared HTTP/MCP/plugin path, 40 available model/effort combinations, sourced knowledge with expiry, durable quotas, response validation and private-request boundaries. All 127 offline tests passed. Six real d1:free calls returned provisional recommendations: five Sol 6.1/medium and one Sol 6.1/low. This is operational evidence, not proof of routing quality.
+Built and locally verified: shared HTTP/MCP/plugin path, 40 available model/effort combinations, sourced knowledge with expiry, durable quotas, response validation and private-request boundaries. All 136 offline tests passed. Six real d1:free calls returned provisional recommendations: five Sol 6.1/medium and one Sol 6.1/low. This is operational evidence, not proof of routing quality.
+
+The research update adds six substantive, reviewed official-source findings to knowledge 2026-10-10.2 and the production payload. The LangChain OSS research graph is implemented and exercised offline with a scripted model. The initial findings came from actual Codex web research, not that test. A live LangChain model/search adapter is not configured, and the changed routing payload has not had additional live calls. The existing Codex heartbeat remains the scheduled research mechanism. See `maintenance/RESEARCH.md` for source pins, publication boundaries and the research-only dependency advisory.
 
 There have been 19 Liquid attempts across the two evaluation batches, within the approved maximum of 36. No additional coding runs or paid fallback occurred. The source-watch workflow checks three official pages twice daily; all three fetched successfully manually. No unattended research run is yet observed.
 

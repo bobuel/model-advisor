@@ -1,6 +1,9 @@
 // Explicitly export only synthetic results and safe catalog fields, never raw traces.
 import {readFile,writeFile} from 'node:fs/promises';
 import {validateKnowledge} from '../service/recommend.mjs';
+// Historical one-time exporter: do not overwrite subsequent reviewed research.
+const existing=JSON.parse(await readFile('knowledge/current.json','utf8'));
+if(existing.research)throw Error('Knowledge already contains reviewed research; update it through maintenance/REVIEW.md instead of rerunning the historical exporter');
 const inventory=JSON.parse(await readFile('data/inventory.local.json','utf8'));
 const ledger=JSON.parse(await readFile('evals/runs/suite-2026-10-10T01-43-00.906Z/ledger.json','utf8'));
 const research=JSON.parse(await readFile('evals/suite/research.json','utf8'));

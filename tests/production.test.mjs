@@ -26,7 +26,10 @@ async function fixture(t,{fetchImpl,onPrepared,limit=100,excludeTaskIds=[]}={}){
 test('all 40 supported combinations reach the same production preparation path',()=>{
   const p=prepareRecommendation(request(),knowledge,{now});assert.equal(p.candidates.length,40);
   assert.ok(Buffer.byteLength(JSON.stringify(p.payload))<=16000);
-  for(const c of p.candidates){const r=finishRecommendation(p,answer(p.payload,c.id));assert.equal(r.primary.model,c.model);assert.equal(r.primary.effort,c.effort);assert.equal(r.primary.speed,null);}
+  for(const c of p.candidates){const r=finishRecommendation(p,answer(p.payload,c.id));
+    const supported=p.findings.some(f=>f.topic==='model-fit'&&f.models.includes(c.model))||p.observations.some(o=>o.model===c.model&&o.effort===c.effort);
+    if(!supported){assert.equal(r.status,'needs_evidence');continue;}
+    assert.equal(r.primary.model,c.model);assert.equal(r.primary.effort,c.effort);assert.equal(r.primary.speed,null);}
 });
 test('same-category prior examples remain, target results alone are hidden',()=>{
   const p=prepareRecommendation(request(),knowledge,{now});assert.equal(p.observations.length,3);
