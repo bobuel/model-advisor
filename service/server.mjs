@@ -1,11 +1,16 @@
-import {readFile,mkdir} from 'node:fs/promises';
-import {join} from 'node:path';
+import {readFile,mkdir,realpath} from 'node:fs/promises';
+import {join,relative,isAbsolute} from 'node:path';
 import {Quota} from './quota.mjs';
 import {createAdvisor,createHttpServer} from './app.mjs';
 const knowledge=JSON.parse(await readFile(new URL('../knowledge/current.json',import.meta.url),'utf8'));
 const directory=process.env.ADVISOR_STATE_DIR;
 if(directory)await mkdir(directory,{recursive:true});
 if(process.env.RAILWAY_ENVIRONMENT_ID&&Number(process.env.DECISION_DAILY_LIMIT)>0&&!process.env.RAILWAY_VOLUME_MOUNT_PATH)throw Error('Live Railway decisions require a mounted persistent volume');
+if(process.env.RAILWAY_VOLUME_MOUNT_PATH&&Number(process.env.DECISION_DAILY_LIMIT)>0){
+  if(!directory)throw Error('Set a state directory inside the mounted volume');
+  const within=relative(await realpath(process.env.RAILWAY_VOLUME_MOUNT_PATH),await realpath(directory));
+  if(within==='..'||within.startsWith('../')||within.startsWith('..\\')||isAbsolute(within))throw Error('Quota state must be inside the mounted volume');
+}
 const quota=new Quota(directory?join(directory,'quota.sqlite'):undefined,{dailyLimit:Number(process.env.DECISION_DAILY_LIMIT??0)});
 const advisor=createAdvisor({knowledge,quota,apiKey:process.env.LIQUID_API_KEY});
 const server=createHttpServer({advisor,knowledge,revision:process.env.RAILWAY_GIT_COMMIT_SHA??process.env.GITHUB_SHA??'local',publicUrl:process.env.PUBLIC_BASE_URL});

@@ -4,7 +4,9 @@ Built and locally verified: shared HTTP/MCP/plugin path, 40 available model/effo
 
 There have been 19 Liquid attempts across the two evaluation batches, within the approved maximum of 36. No additional coding runs or paid fallback occurred. The source-watch workflow checks three official pages twice daily; all three fetched successfully manually. No unattended research run is yet observed.
 
-The plugin source is v0.2.0; the previously installed local pilot is v0.1.1. The hosted endpoint is not configured. Repository and CI receipts will be added after publication.
+The public repository is https://github.com/bobuel/model-advisor. Initial commit `78f46d699a4b7df47cf6c3734b4dfa370763385d` passed [GitHub CI](https://github.com/bobuel/model-advisor/actions/runs/38074346956) and a [manual source-watch run](https://github.com/bobuel/model-advisor/actions/runs/38074370948). The plugin source is v0.2.0; the previously installed local pilot is v0.1.1. The hosted endpoint is not configured.
+
+Codex heartbeat `maintain-model-advisor-research` is active for 06:00 and 18:00 America/New_York. It follows the bounded research workflow, can publish validated repository updates, and cannot make live provider/evaluation calls or infrastructure changes. It depends on local Codex availability. GitHub's twice-daily source checker runs separately. Neither schedule has yet produced a naturally observed unattended maintenance cycle.
 
 The owner authorized a separate Railway project, with budget approval before paid usage. Railway rejected creation with `Free plan resource provision limit exceeded. Please upgrade to provision more resources!` No new project, service, volume or deployment was created; musicapp and eventer remain unchanged.
 

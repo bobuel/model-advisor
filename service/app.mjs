@@ -43,7 +43,8 @@ export function createHttpServer({advisor,knowledge,revision='local',publicUrl}=
   const expectedHost=publicUrl?new URL(publicUrl).host:null;
   return createServer(async(req,res)=>{
     const path=req.url?.split('?')[0];
-    if(expectedHost&&req.headers.host!==expectedHost)return send(res,421,{error:'Unexpected host'});
+    // Platform health probes may use an internal host rather than the public domain.
+    if(expectedHost&&req.headers.host!==expectedHost&&!(req.method==='GET'&&path==='/health'))return send(res,421,{error:'Unexpected host'});
     if(req.headers.origin&&req.headers.origin!==publicUrl)return send(res,403,{error:'Origin not allowed'});
     if(Date.now()-windowStart>60000){windowStart=Date.now();requests=0;}
     if(++requests>120){res.setHeader('Retry-After','60');return send(res,429,{error:'Request limit reached'});}

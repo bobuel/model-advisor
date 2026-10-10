@@ -17,3 +17,13 @@ jobs:
       - run: npm run knowledge:check
       - run: npm run suite:validate
       - run: node scripts/check-publication.mjs
+      - name: Build and probe deployment image without provider usage
+        run: |
+          docker build -t model-advisor:check .
+          docker run -d --name advisor-check -p 127.0.0.1:3000:3000 -e PUBLIC_BASE_URL=https://advisor.example model-advisor:check
+          for attempt in 1 2 3 4 5; do
+            if curl --fail --silent http://127.0.0.1:3000/health; then exit 0; fi
+            sleep 2
+          done
+          docker logs advisor-check
+          exit 1
