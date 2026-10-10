@@ -1,0 +1,10 @@
+{
+  "name": "model-advisor-pilot",
+  "interface": { "displayName": "Model advisor pilot" },
+  "plugins": [{
+    "name": "model-advisor",
+    "source": { "source": "local", "path": "./plugins/model-advisor" },
+    "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+    "category": "Productivity"
+  }]
+}

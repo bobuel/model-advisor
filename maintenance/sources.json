@@ -1,0 +1,5 @@
+[
+  {"id":"codex-models","url":"https://learn.chatgpt.com/docs/models.md","affects":["models","efforts","guidance"]},
+  {"id":"openai-pricing","url":"https://developers.openai.com/api/docs/pricing.md","affects":["pricing","cost-routing"]},
+  {"id":"liquid-decision-guide","url":"https://docs.liquid.ai/guides/decision-model-guide.md","affects":["decision-schema","provider"]}
+]

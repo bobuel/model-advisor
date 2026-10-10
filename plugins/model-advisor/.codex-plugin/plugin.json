@@ -1,0 +1,6 @@
+{
+  "name": "model-advisor",
+  "version": "0.2.0",
+  "description": "Recommend model and effort through a public service using versioned research and task evidence. Hosted release pending.",
+  "skills": "./skills/"
+}

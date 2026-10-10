@@ -1,0 +1,151 @@
+{
+  "observedAt": "2026-10-10T17:27:43.181Z",
+  "harnessVersion": "codex-cli 0.162.0-alpha.2",
+  "source": "Codex app-server model/list",
+  "scope": "Observed in maintainer account; each user must supply their own current supported options.",
+  "models": [
+    {
+      "id": "gpt-6.1-sol",
+      "efforts": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ],
+      "description": "Latest workhorse model for coding and everyday work.",
+      "effortDescriptions": {
+        "low": "Fast responses with lighter reasoning",
+        "medium": "Balances speed and reasoning depth for everyday tasks",
+        "high": "Greater reasoning depth for complex problems",
+        "xhigh": "Extra high reasoning depth for complex problems",
+        "max": "Maximum reasoning depth for the hardest problems",
+        "ultra": "Maximum reasoning with automatic task delegation"
+      },
+      "speedModes": null
+    },
+    {
+      "id": "gpt-6-astra",
+      "efforts": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ],
+      "description": "Frontier intelligence for the most demanding work.",
+      "effortDescriptions": {
+        "low": "Fast responses with lighter reasoning",
+        "medium": "Balances speed and reasoning depth for everyday tasks",
+        "high": "Greater reasoning depth for complex problems",
+        "xhigh": "Extra high reasoning depth for complex problems",
+        "max": "Maximum reasoning depth for the hardest problems",
+        "ultra": "Maximum reasoning with automatic task delegation"
+      },
+      "speedModes": null
+    },
+    {
+      "id": "gpt-6-sol",
+      "efforts": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ],
+      "description": "Previous generation workhorse model.",
+      "effortDescriptions": {
+        "low": "Fast responses with lighter reasoning",
+        "medium": "Balances speed and reasoning depth for everyday tasks",
+        "high": "Greater reasoning depth for complex problems",
+        "xhigh": "Extra high reasoning depth for complex problems",
+        "max": "Maximum reasoning depth for the hardest problems",
+        "ultra": "Maximum reasoning with automatic task delegation"
+      },
+      "speedModes": null
+    },
+    {
+      "id": "gpt-6-luna",
+      "efforts": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "description": "Fast and affordable model for easier tasks.",
+      "effortDescriptions": {
+        "low": "Fast responses with lighter reasoning",
+        "medium": "Balances speed and reasoning depth for everyday tasks",
+        "high": "Greater reasoning depth for complex problems",
+        "xhigh": "Extra high reasoning depth for complex problems",
+        "max": "Maximum reasoning depth for the hardest problems"
+      },
+      "speedModes": null
+    },
+    {
+      "id": "gpt-5.6-sol",
+      "efforts": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ],
+      "description": "Older generation workhorse model.",
+      "effortDescriptions": {
+        "low": "Fast responses with lighter reasoning",
+        "medium": "Balances speed and reasoning depth for everyday tasks",
+        "high": "Greater reasoning depth for complex problems",
+        "xhigh": "Extra high reasoning depth for complex problems",
+        "max": "Maximum reasoning depth for the hardest problems",
+        "ultra": "Maximum reasoning with automatic task delegation"
+      },
+      "speedModes": null
+    },
+    {
+      "id": "gpt-5.6-terra",
+      "efforts": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ],
+      "description": "Older balanced model for straightforward work.",
+      "effortDescriptions": {
+        "low": "Fast responses with lighter reasoning",
+        "medium": "Balances speed and reasoning depth for everyday tasks",
+        "high": "Greater reasoning depth for complex problems",
+        "xhigh": "Extra high reasoning depth for complex problems",
+        "max": "Maximum reasoning depth for the hardest problems",
+        "ultra": "Maximum reasoning with automatic task delegation"
+      },
+      "speedModes": null
+    },
+    {
+      "id": "gpt-5.6-luna",
+      "efforts": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "description": "Older fast and efficient model.",
+      "effortDescriptions": {
+        "low": "Fast responses with lighter reasoning",
+        "medium": "Balances speed and reasoning depth for everyday tasks",
+        "high": "Greater reasoning depth for complex problems",
+        "xhigh": "Extra high reasoning depth for complex problems",
+        "max": "Maximum reasoning depth for the hardest problems"
+      },
+      "speedModes": null
+    }
+  ]
+}

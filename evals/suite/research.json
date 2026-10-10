@@ -1,0 +1,21 @@
+{
+  "version": "research-1",
+  "reviewedAt": "2026-10-10T01:30:00Z",
+  "reviewBy": "2026-10-17T01:30:00Z",
+  "sources": [
+    {"id":"anthropic-evals","url":"https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents","kind":"primary-methodology","claim":"Evaluate task outcomes with appropriate graders and inspect agent execution; repeated trials measure reliability."},
+    {"id":"openai-benchmark-audit","url":"https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/","kind":"primary-benchmark-audit","claim":"Benchmark contamination and faulty tests can invalidate apparent coding performance; audit tasks and graders."},
+    {"id":"routellm","url":"https://arxiv.org/abs/2406.18665","kind":"primary-research","claim":"Routing is evaluated as a quality-cost tradeoff rather than agreement with a single preferred model label."},
+    {"id":"liquid-guide","url":"https://docs.liquid.ai/guides/decision-model-guide","kind":"provider-methodology","claim":"d1 supports typed Choice, Score and Noul decisions; its guide calls for evaluation of decision behavior on the user's task."}
+  ],
+  "opinions": [
+    {"id":"quality-floor","statement":"For speed or cost guidance, first preserve acceptable correctness; a quick failed run is not a good recommendation.","basis":["routellm","anthropic-evals"],"confidence":"medium","appliesTo":["quality","speed","cost","balanced"],"isMeasurement":false},
+    {"id":"minimal-sufficient-effort","statement":"For bounded code-only tasks, lower effort is a plausible starting candidate when comparable observed quality is adequate. Escalate effort when evidence supports improved correctness; do not assume higher effort always wins.","basis":["routellm","local-three-run-smoke"],"confidence":"low","appliesTo":["balanced","speed","cost"],"isMeasurement":false},
+    {"id":"uncertainty","statement":"One success or a small decision-score difference is weak evidence. Treat close candidates as plausibly tied; reserve confidence for repeated, relevant, independently graded outcomes.","basis":["anthropic-evals","openai-benchmark-audit"],"confidence":"medium","appliesTo":["quality","speed","cost","balanced"],"isMeasurement":false},
+    {"id":"harness-scope","statement":"Code-only success cannot establish performance with filesystem, browser, network, or multi-file tools. Do not transfer this evidence to those harnesses without testing.","basis":["anthropic-evals"],"confidence":"high","appliesTo":["quality","speed","cost","balanced"],"isMeasurement":false}
+  ],
+  "localEvidence": [{"id":"local-three-run-smoke","source":"evals/runs/code-only-2026-10-10T01-08-01.389Z/summary.json","claim":"Three configurations each passed one merge-intervals repair. This motivates a hypothesis, not a model ranking."}],
+  "modelSpecificClaims": [],
+  "pricing": {"status":"unknown","reason":"Subscription usage does not provide per-task dollar prices. No price values are inferred from model names or token counts."},
+  "maintenance": {"targetCadence":"twice daily, not yet scheduled","pricingOrRetirementChange":"invalidate affected price/availability records and rerun affected routing cases; do not retrain automatically","newModel":"discover actual harness support, add a separately budgeted candidate cohort, then test","opinionChange":"version the source and interpretation, run an ablation, and recheck the sealed held-out set only after selection"}
+}

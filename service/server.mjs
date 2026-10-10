@@ -1,0 +1,14 @@
+import {readFile,mkdir} from 'node:fs/promises';
+import {join} from 'node:path';
+import {Quota} from './quota.mjs';
+import {createAdvisor,createHttpServer} from './app.mjs';
+const knowledge=JSON.parse(await readFile(new URL('../knowledge/current.json',import.meta.url),'utf8'));
+const directory=process.env.ADVISOR_STATE_DIR;
+if(directory)await mkdir(directory,{recursive:true});
+if(process.env.RAILWAY_ENVIRONMENT_ID&&Number(process.env.DECISION_DAILY_LIMIT)>0&&!process.env.RAILWAY_VOLUME_MOUNT_PATH)throw Error('Live Railway decisions require a mounted persistent volume');
+const quota=new Quota(directory?join(directory,'quota.sqlite'):undefined,{dailyLimit:Number(process.env.DECISION_DAILY_LIMIT??0)});
+const advisor=createAdvisor({knowledge,quota,apiKey:process.env.LIQUID_API_KEY});
+const server=createHttpServer({advisor,knowledge,revision:process.env.RAILWAY_GIT_COMMIT_SHA??process.env.GITHUB_SHA??'local',publicUrl:process.env.PUBLIC_BASE_URL});
+server.requestTimeout=20000;server.headersTimeout=10000;
+server.listen(Number(process.env.PORT??3000),process.env.HOST??'0.0.0.0',()=>console.log(JSON.stringify({event:'listening',knowledgeVersion:knowledge.version,liveDailyLimit:quota.limit})));
+for(const signal of ['SIGTERM','SIGINT'])process.on(signal,()=>server.close(()=>{quota.close();process.exit(0);}));

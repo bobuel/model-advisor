@@ -1,0 +1,1 @@
+{"$schema":"https://agent-plugins.org/schemas/1.0.0/plugin.schema.json","name":"model-advisor","version":"0.2.0","description":"Choose supported model and effort settings using versioned research and measured task evidence. Hosted endpoint pending release."}

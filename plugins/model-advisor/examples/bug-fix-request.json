@@ -1,0 +1,11 @@
+{
+  "task": "Fix mergeIntervals for half-open numeric ranges. Overlaps must merge; touching ranges must stay separate. Handle empty input and do not mutate the input. Pass independent acceptance tests.",
+  "taskCategory": "bounded-bug-fix",
+  "priority": "quality",
+  "configurations": [
+    { "model": "gpt-6-astra", "effort": "high", "speed": null },
+    { "model": "gpt-6.1-sol", "effort": "low", "speed": null },
+    { "model": "gpt-6-luna", "effort": "low", "speed": null }
+  ],
+  "constraints": { "subscriptionOnly": true }
+}

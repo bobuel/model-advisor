@@ -1,0 +1,702 @@
+{
+  "scope": "Six synthetic task summaries through the actual hosted-client and local service with real d1:free responses. No task execution or comparative routing quality is established.",
+  "finishedAt": "2026-10-10T18:00:00.420Z",
+  "providerCalls": 6,
+  "status": "completed",
+  "results": [
+    {
+      "id": "small-edit",
+      "task": "Rename a local variable and adjust two call sites; preserve behavior.",
+      "taskCategory": "collections",
+      "priority": "balanced",
+      "executionMode": "tools",
+      "payloadHash": "0afcf774bc5aed0e26ad1674bd9086e2c6bbd4fae5752696538b75959a264f16",
+      "result": {
+        "knowledgeVersion": "2026-10-10.1",
+        "knowledgeHash": "2415aad2b9b9556643d7726ba3850e7de32f3f34c6f6529b8875d81ddd092c8a",
+        "payloadHash": "0afcf774bc5aed0e26ad1674bd9086e2c6bbd4fae5752696538b75959a264f16",
+        "decisionModel": "d1:free",
+        "decisionConfidence": 0.30026238279656114,
+        "distribution": {
+          "c0": 0.24713616412505496,
+          "c1": 0.31732915394786454,
+          "c2": 0.0005754744636313456,
+          "c3": 0.00019887865297518747,
+          "c4": 0.0005078544316711939,
+          "c5": 0.00012062600059180035,
+          "c6": 0.0017725861389993375,
+          "c7": 0.0015643017772313025,
+          "c8": 0.0001648761943009255,
+          "c9": 0.0006125893777842946,
+          "c10": 0.0003715542394404598,
+          "c11": 0.00010645207189343138,
+          "c12": 0.012304186566239007,
+          "c13": 0.017902485817738366,
+          "c14": 0.00021170522408913494,
+          "c15": 0.00027183488857602313,
+          "c16": 0.00021170522408913494,
+          "c17": 0.00019887865297518747,
+          "c18": 0.24713616412505496,
+          "c19": 0.04866400188260397,
+          "c20": 0.00030802928347951376,
+          "c21": 0.00012062600059180035,
+          "c22": 0.00010000246690024868,
+          "c23": 0.008456535511219975,
+          "c24": 0.005129148062503564,
+          "c25": 0.0003490429060740939,
+          "c26": 0.001009989137357923,
+          "c27": 0.0012968517229460996,
+          "c28": 0.0005406082284508645,
+          "c29": 0.06248580039722607,
+          "c30": 0.013942469973779358,
+          "c31": 0.00006456644539329961,
+          "c32": 0.00044817996291368866,
+          "c33": 0.00010645207189343138,
+          "c34": 0.00019887865297518747,
+          "c35": 0.005129148062503564,
+          "c36": 0.002138147020565344,
+          "c37": 0.0001455027307805027,
+          "c38": 0.00019887865297518747,
+          "c39": 0.0003490429060740939,
+          "insufficient": 0.00012062600059180035
+        },
+        "usage": {
+          "input_tokens": 1899,
+          "output_tokens": 0
+        },
+        "status": "provisional",
+        "primary": {
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "speed": null,
+          "speedLabel": "Use the harness default",
+          "evidenceBasis": "provider guidance and editorial opinion",
+          "priorAttempts": 0,
+          "priorPassed": 0,
+          "estimatedCostUsd": null
+        },
+        "alternative": {
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "speed": null,
+          "speedLabel": "Use the harness default",
+          "evidenceBasis": "provider guidance and editorial opinion",
+          "priorAttempts": 0,
+          "priorPassed": 0,
+          "estimatedCostUsd": null
+        },
+        "reason": "Selected for your balanced priority using the published guidance and any matching prior observations. Latest workhorse model for coding and everyday work.",
+        "sources": [
+          {
+            "id": "codex-catalog",
+            "url": "https://github.com/bobuel/model-advisor/blob/main/knowledge/catalog-proof.json",
+            "kind": "provider-catalog-observation"
+          },
+          {
+            "id": "anthropic-evals",
+            "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+            "kind": "primary-methodology",
+            "claim": "Evaluate task outcomes with appropriate graders and inspect agent execution; repeated trials measure reliability."
+          },
+          {
+            "id": "openai-benchmark-audit",
+            "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
+            "kind": "primary-benchmark-audit",
+            "claim": "Benchmark contamination and faulty tests can invalidate apparent coding performance; audit tasks and graders."
+          },
+          {
+            "id": "routellm",
+            "url": "https://arxiv.org/abs/2406.18665",
+            "kind": "primary-research",
+            "claim": "Routing is evaluated as a quality-cost tradeoff rather than agreement with a single preferred model label."
+          }
+        ],
+        "limitations": [
+          "This is provisional advice, not a guarantee or a measured success probability.",
+          "No separate speed mode or per-task dollar cost has been verified.",
+          "No measured tasks match this harness version and task category; this recommendation relies on guidance."
+        ]
+      }
+    },
+    {
+      "id": "parser-bug",
+      "task": "Fix an escaped-quote CSV parser bug and add a regression check.",
+      "taskCategory": "text",
+      "priority": "quality",
+      "executionMode": "code-only",
+      "payloadHash": "5ddd5b9121eeee574612b03b3796bcf5df264247aff77972f43f0354aa297c51",
+      "result": {
+        "knowledgeVersion": "2026-10-10.1",
+        "knowledgeHash": "2415aad2b9b9556643d7726ba3850e7de32f3f34c6f6529b8875d81ddd092c8a",
+        "payloadHash": "5ddd5b9121eeee574612b03b3796bcf5df264247aff77972f43f0354aa297c51",
+        "decisionModel": "d1:free",
+        "decisionConfidence": 0.42815650685577633,
+        "distribution": {
+          "c0": 0.23664116995346193,
+          "c1": 0.4421039091275867,
+          "c2": 0.0038249487258494156,
+          "c3": 0.0006646764235866085,
+          "c4": 0.0006646764235866085,
+          "c5": 0.0003342202949121359,
+          "c6": 0.002978873062899497,
+          "c7": 0.013350382847921153,
+          "c8": 0.002628846251201493,
+          "c9": 0.0014978714427928842,
+          "c10": 0.0012417790413661888,
+          "c11": 0.0002770783563690014,
+          "c12": 0.005565267557465729,
+          "c13": 0.010397288616264044,
+          "c14": 0.0005865748850361885,
+          "c15": 0.0009670984898176463,
+          "c16": 0.0006646764235866085,
+          "c17": 0.00040314662969341943,
+          "c18": 0.20883509950792495,
+          "c19": 0.041122064383407694,
+          "c20": 0.000753177061177156,
+          "c21": 0.00019043298371743892,
+          "c22": 0.0003139709108978327,
+          "c23": 0.0035932067976547012,
+          "c24": 0.007606818850327778,
+          "c25": 0.0011665434525873933,
+          "c26": 0.0010294709836387143,
+          "c27": 0.0012417790413661888,
+          "c28": 0.0004568249797962029,
+          "c29": 0.0038249487258494156,
+          "c30": 0.0011665434525873933,
+          "c31": 0.00013088254803717158,
+          "c32": 0.0009085049543618821,
+          "c33": 0.0003557756519918615,
+          "c34": 0.0004862876596883211,
+          "c35": 0.0009085049543618821,
+          "c36": 0.0003342202949121359,
+          "c37": 0.00015787448856373093,
+          "c38": 0.00021578884091231603,
+          "c39": 0.0003342202949121359,
+          "insufficient": 0.00007457462792860033
+        },
+        "usage": {
+          "input_tokens": 2616,
+          "output_tokens": 0
+        },
+        "status": "provisional",
+        "primary": {
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "speed": null,
+          "speedLabel": "Use the harness default",
+          "evidenceBasis": "provider guidance and editorial opinion",
+          "priorAttempts": 0,
+          "priorPassed": 0,
+          "estimatedCostUsd": null
+        },
+        "alternative": {
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "speed": null,
+          "speedLabel": "Use the harness default",
+          "evidenceBasis": "provider guidance and prior measured tasks",
+          "priorAttempts": 1,
+          "priorPassed": 1,
+          "estimatedCostUsd": null
+        },
+        "reason": "Selected for your quality priority using the published guidance and any matching prior observations. Latest workhorse model for coding and everyday work.",
+        "sources": [
+          {
+            "id": "codex-catalog",
+            "url": "https://github.com/bobuel/model-advisor/blob/main/knowledge/catalog-proof.json",
+            "kind": "provider-catalog-observation"
+          },
+          {
+            "id": "synthetic-batch-1",
+            "url": "https://github.com/bobuel/model-advisor/blob/main/knowledge/synthetic-results.json",
+            "kind": "measured-synthetic-tasks"
+          },
+          {
+            "id": "anthropic-evals",
+            "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+            "kind": "primary-methodology",
+            "claim": "Evaluate task outcomes with appropriate graders and inspect agent execution; repeated trials measure reliability."
+          },
+          {
+            "id": "openai-benchmark-audit",
+            "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
+            "kind": "primary-benchmark-audit",
+            "claim": "Benchmark contamination and faulty tests can invalidate apparent coding performance; audit tasks and graders."
+          },
+          {
+            "id": "routellm",
+            "url": "https://arxiv.org/abs/2406.18665",
+            "kind": "primary-research",
+            "claim": "Routing is evaluated as a quality-cost tradeoff rather than agreement with a single preferred model label."
+          }
+        ],
+        "limitations": [
+          "This is provisional advice, not a guarantee or a measured success probability.",
+          "No separate speed mode or per-task dollar cost has been verified.",
+          "Small synthetic-task observations do not establish broad reliability."
+        ]
+      }
+    },
+    {
+      "id": "merge-patch-new",
+      "task": "Implement a merge patch that preserves literal object keys and never mutates its input.",
+      "taskCategory": "objects",
+      "priority": "speed",
+      "executionMode": "code-only",
+      "payloadHash": "639da30a8c0eee3952407991e29135723a0796a940f38d1bc4b2de2ba47b5d30",
+      "result": {
+        "knowledgeVersion": "2026-10-10.1",
+        "knowledgeHash": "2415aad2b9b9556643d7726ba3850e7de32f3f34c6f6529b8875d81ddd092c8a",
+        "payloadHash": "639da30a8c0eee3952407991e29135723a0796a940f38d1bc4b2de2ba47b5d30",
+        "decisionModel": "d1:free",
+        "decisionConfidence": 0.8889332307730587,
+        "distribution": {
+          "c0": 0.8916421763639598,
+          "c1": 0.0731904522729592,
+          "c2": 0.00033893903654661774,
+          "c3": 0.0001033705657902464,
+          "c4": 0.00007562752150520131,
+          "c5": 0.00004882879781722695,
+          "c6": 0.013538872321300733,
+          "c7": 0.002665962029163023,
+          "c8": 0.009305121793349837,
+          "c9": 0.00038406824494676035,
+          "c10": 0.0002055769174389844,
+          "c11": 0.0000588987729700003,
+          "c12": 0.0028379018077294505,
+          "c13": 0.00038406824494676035,
+          "c14": 0.00014129081132271083,
+          "c15": 0.00009122420412830957,
+          "c16": 0.00018142099288279284,
+          "c17": 0.00005197798471205856,
+          "c18": 0.0004931533882542936,
+          "c19": 0.00006674105347849005,
+          "c20": 0.0000588987729700003,
+          "c21": 0.000043091262830632236,
+          "c22": 0.000043091262830632236,
+          "c23": 0.0004352063376335125,
+          "c24": 0.00028099033058515696,
+          "c25": 0.00014129081132271083,
+          "c26": 0.00031840375842930675,
+          "c27": 0.00011003739449892133,
+          "c28": 0.00005533027671170354,
+          "c29": 0.0001033705657902464,
+          "c30": 0.00005197798471205856,
+          "c31": 0.000020354871276562767,
+          "c32": 0.001616987708317079,
+          "c33": 0.000029616162953057456,
+          "c34": 0.00026396598707597343,
+          "c35": 0.0002991126499173971,
+          "c36": 0.00006674105347849005,
+          "c37": 0.00008569720900289702,
+          "c38": 0.0001033705657902464,
+          "c39": 0.00004882879781722695,
+          "insufficient": 0.000017963110854074794
+        },
+        "usage": {
+          "input_tokens": 2622,
+          "output_tokens": 0
+        },
+        "status": "provisional",
+        "primary": {
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "speed": null,
+          "speedLabel": "Use the harness default",
+          "evidenceBasis": "provider guidance and prior measured tasks",
+          "priorAttempts": 1,
+          "priorPassed": 1,
+          "estimatedCostUsd": null
+        },
+        "alternative": {
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "speed": null,
+          "speedLabel": "Use the harness default",
+          "evidenceBasis": "provider guidance and editorial opinion",
+          "priorAttempts": 0,
+          "priorPassed": 0,
+          "estimatedCostUsd": null
+        },
+        "reason": "Selected for your speed priority using the published guidance and any matching prior observations. Latest workhorse model for coding and everyday work.",
+        "sources": [
+          {
+            "id": "codex-catalog",
+            "url": "https://github.com/bobuel/model-advisor/blob/main/knowledge/catalog-proof.json",
+            "kind": "provider-catalog-observation"
+          },
+          {
+            "id": "synthetic-batch-1",
+            "url": "https://github.com/bobuel/model-advisor/blob/main/knowledge/synthetic-results.json",
+            "kind": "measured-synthetic-tasks"
+          },
+          {
+            "id": "anthropic-evals",
+            "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+            "kind": "primary-methodology",
+            "claim": "Evaluate task outcomes with appropriate graders and inspect agent execution; repeated trials measure reliability."
+          },
+          {
+            "id": "openai-benchmark-audit",
+            "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
+            "kind": "primary-benchmark-audit",
+            "claim": "Benchmark contamination and faulty tests can invalidate apparent coding performance; audit tasks and graders."
+          },
+          {
+            "id": "routellm",
+            "url": "https://arxiv.org/abs/2406.18665",
+            "kind": "primary-research",
+            "claim": "Routing is evaluated as a quality-cost tradeoff rather than agreement with a single preferred model label."
+          }
+        ],
+        "limitations": [
+          "This is provisional advice, not a guarantee or a measured success probability.",
+          "No separate speed mode or per-task dollar cost has been verified.",
+          "Small synthetic-task observations do not establish broad reliability."
+        ]
+      }
+    },
+    {
+      "id": "frontend",
+      "task": "Make a checkout form usable on a small phone and verify keyboard navigation.",
+      "taskCategory": "ui",
+      "priority": "balanced",
+      "executionMode": "tools",
+      "payloadHash": "1c21e4bb71b4d399a2b2db7ee36176f2abe0eaf9e605cde91244f48c57e21004",
+      "result": {
+        "knowledgeVersion": "2026-10-10.1",
+        "knowledgeHash": "2415aad2b9b9556643d7726ba3850e7de32f3f34c6f6529b8875d81ddd092c8a",
+        "payloadHash": "1c21e4bb71b4d399a2b2db7ee36176f2abe0eaf9e605cde91244f48c57e21004",
+        "decisionModel": "d1:free",
+        "decisionConfidence": 0.7351695024558207,
+        "distribution": {
+          "c0": 0.11373246418936162,
+          "c1": 0.7416287828837276,
+          "c2": 0.0003400539100312553,
+          "c3": 0.00009152426825599477,
+          "c4": 0.0003400539100312553,
+          "c5": 0.00004602129222979755,
+          "c6": 0.0002648342514188347,
+          "c7": 0.0003000965223143635,
+          "c8": 0.00008076988324723699,
+          "c9": 0.0003194510851441597,
+          "c10": 0.0003194510851441597,
+          "c11": 0.00004061364784573685,
+          "c12": 0.0019568751406520736,
+          "c13": 0.022395250048628204,
+          "c14": 0.0001037105829923537,
+          "c15": 0.0001037105829923537,
+          "c16": 0.00008597909316412622,
+          "c17": 0.00014175555973520288,
+          "c18": 0.07816710328782642,
+          "c19": 0.01276042883326272,
+          "c20": 0.0001037105829923537,
+          "c21": 0.00008597909316412622,
+          "c22": 0.0000629036483215341,
+          "c23": 0.0011869047700349545,
+          "c24": 0.01276042883326272,
+          "c25": 0.00018201774165679788,
+          "c26": 0.0003400539100312553,
+          "c27": 0.0007663233157833045,
+          "c28": 0.0001508980078589231,
+          "c29": 0.004409886203692189,
+          "c30": 0.00414270470526937,
+          "c31": 0.000024633422621211338,
+          "c32": 0.00021955530591772295,
+          "c33": 0.00003366989665964053,
+          "c34": 0.00007587628340437374,
+          "c35": 0.0011149938452864607,
+          "c36": 0.0008157469233908886,
+          "c37": 0.00003366989665964053,
+          "c38": 0.00008076988324723699,
+          "c39": 0.00016063009322756723,
+          "insufficient": 0.000029713579512476182
+        },
+        "usage": {
+          "input_tokens": 1898,
+          "output_tokens": 0
+        },
+        "status": "provisional",
+        "primary": {
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "speed": null,
+          "speedLabel": "Use the harness default",
+          "evidenceBasis": "provider guidance and editorial opinion",
+          "priorAttempts": 0,
+          "priorPassed": 0,
+          "estimatedCostUsd": null
+        },
+        "alternative": {
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "speed": null,
+          "speedLabel": "Use the harness default",
+          "evidenceBasis": "provider guidance and editorial opinion",
+          "priorAttempts": 0,
+          "priorPassed": 0,
+          "estimatedCostUsd": null
+        },
+        "reason": "Selected for your balanced priority using the published guidance and any matching prior observations. Latest workhorse model for coding and everyday work.",
+        "sources": [
+          {
+            "id": "codex-catalog",
+            "url": "https://github.com/bobuel/model-advisor/blob/main/knowledge/catalog-proof.json",
+            "kind": "provider-catalog-observation"
+          },
+          {
+            "id": "anthropic-evals",
+            "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+            "kind": "primary-methodology",
+            "claim": "Evaluate task outcomes with appropriate graders and inspect agent execution; repeated trials measure reliability."
+          },
+          {
+            "id": "openai-benchmark-audit",
+            "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
+            "kind": "primary-benchmark-audit",
+            "claim": "Benchmark contamination and faulty tests can invalidate apparent coding performance; audit tasks and graders."
+          },
+          {
+            "id": "routellm",
+            "url": "https://arxiv.org/abs/2406.18665",
+            "kind": "primary-research",
+            "claim": "Routing is evaluated as a quality-cost tradeoff rather than agreement with a single preferred model label."
+          }
+        ],
+        "limitations": [
+          "This is provisional advice, not a guarantee or a measured success probability.",
+          "No separate speed mode or per-task dollar cost has been verified.",
+          "No measured tasks match this harness version and task category; this recommendation relies on guidance."
+        ]
+      }
+    },
+    {
+      "id": "migration",
+      "task": "Plan a backward-compatible database migration with a tested rollback.",
+      "taskCategory": "database",
+      "priority": "quality",
+      "executionMode": "tools",
+      "payloadHash": "89ba5d1da1b04bf249386df6e315d49903581b14f985e3edc39bcdac7fc152ae",
+      "result": {
+        "knowledgeVersion": "2026-10-10.1",
+        "knowledgeHash": "2415aad2b9b9556643d7726ba3850e7de32f3f34c6f6529b8875d81ddd092c8a",
+        "payloadHash": "89ba5d1da1b04bf249386df6e315d49903581b14f985e3edc39bcdac7fc152ae",
+        "decisionModel": "d1:free",
+        "decisionConfidence": 0.35920645687030583,
+        "distribution": {
+          "c0": 0.003911761100915656,
+          "c1": 0.37483556767834714,
+          "c2": 0.37483556767834714,
+          "c3": 0.008815289720180869,
+          "c4": 0.002688510183869039,
+          "c5": 0.0015318676573340007,
+          "c6": 0.002525622790544142,
+          "c7": 0.032752766887141564,
+          "c8": 0.1216912919004431,
+          "c9": 0.02114678071890402,
+          "c10": 0.010633269117891976,
+          "c11": 0.003046482608581374,
+          "c12": 0.0007702710640859514,
+          "c13": 0.00237260304117659,
+          "c14": 0.014533948738717913,
+          "c15": 0.0034521154091116794,
+          "c16": 0.0013518678181458136,
+          "c17": 0.0006385774455164368,
+          "c18": 0.0017358334662111261,
+          "c19": 0.0022288532269519757,
+          "c20": 0.0015318676573340007,
+          "c21": 0.000412296390109489,
+          "c22": 0.0005635423490106423,
+          "c23": 0.00028336688860647205,
+          "c24": 0.0015318676573340007,
+          "c25": 0.003046482608581374,
+          "c26": 0.00026619855672573093,
+          "c27": 0.0008199496705666361,
+          "c28": 0.0010528362174123014,
+          "c29": 0.00025007040149024564,
+          "c30": 0.0003873167993066926,
+          "c31": 0.0003418058757071356,
+          "c32": 0.0003873167993066926,
+          "c33": 0.000412296390109489,
+          "c34": 0.0009291247007952377,
+          "c35": 0.0005998879939362013,
+          "c36": 0.00025007040149024564,
+          "c37": 0.0004671932394326477,
+          "c38": 0.00011096806799219218,
+          "c39": 0.00008642201824824017,
+          "insufficient": 0.0007702710640859514
+        },
+        "usage": {
+          "input_tokens": 1896,
+          "output_tokens": 0
+        },
+        "status": "provisional",
+        "primary": {
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "speed": null,
+          "speedLabel": "Use the harness default",
+          "evidenceBasis": "provider guidance and editorial opinion",
+          "priorAttempts": 0,
+          "priorPassed": 0,
+          "estimatedCostUsd": null
+        },
+        "alternative": {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "speed": null,
+          "speedLabel": "Use the harness default",
+          "evidenceBasis": "provider guidance and editorial opinion",
+          "priorAttempts": 0,
+          "priorPassed": 0,
+          "estimatedCostUsd": null
+        },
+        "reason": "Selected for your quality priority using the published guidance and any matching prior observations. Latest workhorse model for coding and everyday work.",
+        "sources": [
+          {
+            "id": "codex-catalog",
+            "url": "https://github.com/bobuel/model-advisor/blob/main/knowledge/catalog-proof.json",
+            "kind": "provider-catalog-observation"
+          },
+          {
+            "id": "anthropic-evals",
+            "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+            "kind": "primary-methodology",
+            "claim": "Evaluate task outcomes with appropriate graders and inspect agent execution; repeated trials measure reliability."
+          },
+          {
+            "id": "openai-benchmark-audit",
+            "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
+            "kind": "primary-benchmark-audit",
+            "claim": "Benchmark contamination and faulty tests can invalidate apparent coding performance; audit tasks and graders."
+          },
+          {
+            "id": "routellm",
+            "url": "https://arxiv.org/abs/2406.18665",
+            "kind": "primary-research",
+            "claim": "Routing is evaluated as a quality-cost tradeoff rather than agreement with a single preferred model label."
+          }
+        ],
+        "limitations": [
+          "This is provisional advice, not a guarantee or a measured success probability.",
+          "No separate speed mode or per-task dollar cost has been verified.",
+          "No measured tasks match this harness version and task category; this recommendation relies on guidance."
+        ]
+      }
+    },
+    {
+      "id": "architecture",
+      "task": "Compare two designs for a multi-tenant job service with failure recovery and quotas.",
+      "taskCategory": "architecture",
+      "priority": "speed",
+      "executionMode": "tools",
+      "payloadHash": "1696c2d5341e007c8e8ec2173180fbb66865caffc61264725ec4f9cc68148e53",
+      "result": {
+        "knowledgeVersion": "2026-10-10.1",
+        "knowledgeHash": "2415aad2b9b9556643d7726ba3850e7de32f3f34c6f6529b8875d81ddd092c8a",
+        "payloadHash": "1696c2d5341e007c8e8ec2173180fbb66865caffc61264725ec4f9cc68148e53",
+        "decisionModel": "d1:free",
+        "decisionConfidence": 0.5912433969813966,
+        "distribution": {
+          "c0": 0.01247777770608254,
+          "c1": 0.6012130702257528,
+          "c2": 0.04636056838592943,
+          "c3": 0.0012354672994853984,
+          "c4": 0.0012354672994853984,
+          "c5": 0.0008491234292331495,
+          "c6": 0.015051072914627496,
+          "c7": 0.09814532404318564,
+          "c8": 0.04355173392474084,
+          "c9": 0.006274220653520112,
+          "c10": 0.003154876271747386,
+          "c11": 0.001160614119815472,
+          "c12": 0.0033583483098465275,
+          "c13": 0.017055099990206154,
+          "c14": 0.003574943166947787,
+          "c15": 0.002168312637484012,
+          "c16": 0.0013151480944764181,
+          "c17": 0.0008491234292331495,
+          "c18": 0.05952816233224176,
+          "c19": 0.04355173392474084,
+          "c20": 0.005536980292863795,
+          "c21": 0.0005482352908397814,
+          "c22": 0.0007976776413625947,
+          "c23": 0.0013999678592265285,
+          "c24": 0.008056258789026995,
+          "c25": 0.0015863714140258174,
+          "c26": 0.0005835934292821685,
+          "c27": 0.0015863714140258174,
+          "c28": 0.0009038871853560188,
+          "c29": 0.0009621829002983422,
+          "c30": 0.0023081567878033005,
+          "c31": 0.00035396730766647173,
+          "c32": 0.0017975943137927886,
+          "c33": 0.0010242383658331004,
+          "c34": 0.0020369412159160216,
+          "c35": 0.005201511615657033,
+          "c36": 0.0013999678592265285,
+          "c37": 0.0004545030197202793,
+          "c38": 0.0002756701478420636,
+          "c39": 0.00062123197173174,
+          "insufficient": 0.0004545030197202793
+        },
+        "usage": {
+          "input_tokens": 1902,
+          "output_tokens": 0
+        },
+        "status": "provisional",
+        "primary": {
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "speed": null,
+          "speedLabel": "Use the harness default",
+          "evidenceBasis": "provider guidance and editorial opinion",
+          "priorAttempts": 0,
+          "priorPassed": 0,
+          "estimatedCostUsd": null
+        },
+        "alternative": {
+          "model": "gpt-6-astra",
+          "effort": "medium",
+          "speed": null,
+          "speedLabel": "Use the harness default",
+          "evidenceBasis": "provider guidance and editorial opinion",
+          "priorAttempts": 0,
+          "priorPassed": 0,
+          "estimatedCostUsd": null
+        },
+        "reason": "Selected for your speed priority using the published guidance and any matching prior observations. Latest workhorse model for coding and everyday work.",
+        "sources": [
+          {
+            "id": "codex-catalog",
+            "url": "https://github.com/bobuel/model-advisor/blob/main/knowledge/catalog-proof.json",
+            "kind": "provider-catalog-observation"
+          },
+          {
+            "id": "anthropic-evals",
+            "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+            "kind": "primary-methodology",
+            "claim": "Evaluate task outcomes with appropriate graders and inspect agent execution; repeated trials measure reliability."
+          },
+          {
+            "id": "openai-benchmark-audit",
+            "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
+            "kind": "primary-benchmark-audit",
+            "claim": "Benchmark contamination and faulty tests can invalidate apparent coding performance; audit tasks and graders."
+          },
+          {
+            "id": "routellm",
+            "url": "https://arxiv.org/abs/2406.18665",
+            "kind": "primary-research",
+            "claim": "Routing is evaluated as a quality-cost tradeoff rather than agreement with a single preferred model label."
+          }
+        ],
+        "limitations": [
+          "This is provisional advice, not a guarantee or a measured success probability.",
+          "No separate speed mode or per-task dollar cost has been verified.",
+          "No measured tasks match this harness version and task category; this recommendation relies on guidance."
+        ]
+      }
+    }
+  ]
+}
