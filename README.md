@@ -2,7 +2,7 @@
 
 A public plugin and service for choosing a model, reasoning effort and supported speed setting for a proposed task. Recommendations combine the user's priorities and current harness options with versioned provider guidance, editorial opinions and measured task results.
 
-**Status: locally verified implementation; hosting is blocked by Railway's free-plan resource limit.** The hosted plugin endpoint is not configured yet. No public-service availability or OpenAI directory approval is claimed.
+**Status: locally verified implementation; hosting is on hold at the owner's $0 budget.** Railway rejected a new project under its free-plan resource limit. The hosted plugin endpoint is not configured yet. No public-service availability or OpenAI directory approval is claimed.
 
 ## How it works
 

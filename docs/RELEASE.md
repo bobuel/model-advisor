@@ -10,4 +10,8 @@ Codex heartbeat `maintain-model-advisor-research` is active for 06:00 and 18:00 
 
 The owner authorized a separate Railway project, with budget approval before paid usage. Railway rejected creation with `Free plan resource provision limit exceeded. Please upgrade to provision more resources!` No new project, service, volume or deployment was created; musicapp and eventer remain unchanged.
 
+The owner subsequently chose **$0 hosting and to leave deployment blocked**. Do not upgrade the account, create paid resources, move unrelated services or deploy elsewhere without a new instruction. Repository maintenance remains permitted. Commit `2f0e3733b288512abed44405bfaec70d3d265eb1` passed [CI including the actual Docker build and container health probe](https://github.com/bobuel/model-advisor/actions/runs/38074449676).
+
+The revised plugin workflow was inspected, and its packaged client was exercised in integration and live tests. The bundled Python skill validator could not run because both available Python runtimes lack PyYAML. Fresh installation and conversational invocation of v0.2.0 remain deferred with hosting; the installed v0.1.1 pilot was preserved.
+
 Remaining: account capacity and operating budget, pinned deployment verification, endpoint configuration and public plugin invocation, observation of unattended maintenance, real task outcomes for revised routing, broader harness coverage and verified cost/speed settings. Public-directory acceptance and production acceptance are not claimed.
