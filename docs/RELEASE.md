@@ -1,4 +1,12 @@
-# 0.2.0 candidate status
+# Current repository status — October 21, 2026
+
+The cleanup candidate refreshes knowledge to 2026-10-21.1 after reviewing all three required sources. The Liquid guide now fetches successfully with TLS verification enabled. Max and Ultra findings have separate model scopes; Luna remains limited to Max. The original 18 synthetic observations and all prior live-call records are preserved.
+
+The source-watch workflow remains manually disabled. Its only observed run is the successful October 10 manual check. Current Codex-heartbeat enablement and unattended execution were not verified; earlier schedule statements below are historical. Hosting remains on hold at $0, with no public endpoint configured. This is repository publication, not a hosted-service launch. Validation and commit evidence are recorded in the cleanup PR and the source-review record.
+
+## Historical release record — October 10, 2026
+
+### 0.2.0 candidate status
 
 Built and locally verified: shared HTTP/MCP/plugin path, 40 available model/effort combinations, sourced knowledge with expiry, durable quotas, response validation and private-request boundaries. All 136 offline tests passed. Six real d1:free calls returned provisional recommendations: five Sol 6.1/medium and one Sol 6.1/low. This is operational evidence, not proof of routing quality.
 

@@ -1,7 +1,7 @@
 {
-  "observedAt": "2026-10-10T17:27:43.181Z",
-  "harnessVersion": "codex-cli 0.162.0-alpha.2",
-  "source": "Codex app-server model/list",
+  "observedAt": "2026-10-21T23:11:41.539Z",
+  "harnessVersion": "codex-cli 0.163.0-alpha.10.2",
+  "source": "Codex CLI app-server model/list",
   "scope": "Observed in maintainer account; each user must supply their own current supported options.",
   "models": [
     {
