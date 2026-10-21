@@ -76,3 +76,21 @@ test('production payload carries researched effort and returns source-linked adv
   assert.equal(r.status,'provisional');assert.equal(r.primary.priorAttempts,0);assert.ok(r.primary.research.length);
   assert.ok(r.sources.some(s=>s.contentHash));
 });
+
+test('Luna request excludes Ultra even when supplied by an inconsistent harness',()=>{
+  const request={task:'Review a difficult parser.',taskCategory:'parsing',priority:'quality',harness:{id:'codex',version:'test',accessType:'chatgpt',observedAt:new Date(now).toISOString(),models:[{id:'gpt-6-luna',efforts:['max','ultra'],speedModes:null}]}};
+  const p=prepareRecommendation(request,k,{now});
+  assert.deepEqual(p.candidates.map(c=>c.effort),['max']);
+  assert.ok(!p.findings.some(f=>f.id==='effort-ultra'));
+  assert.ok(p.findings.some(f=>f.limitations.some(l=>l.includes('not Ultra'))));
+  request.harness.models[0].efforts=['ultra'];
+  assert.equal(prepareRecommendation(request,k,{now}).status,'no_eligible_option');
+});
+
+test('published research matches the separately reviewed source ledger',async()=>{
+  const ledger=JSON.parse(await readFile(new URL('../maintenance/reviewed-sources.json',import.meta.url),'utf8'));
+  const {review,...draft}=k.research;
+  validateResearch(draft,{now,ledger:ledger.entries});
+  assert.equal(review.draftHash,ledger.draftHash);
+  assert.equal(k.version,ledger.knowledgeVersion);
+});

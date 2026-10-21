@@ -1,0 +1,44 @@
+{
+  "reviewedAt": "2026-10-21T23:14:18.249Z",
+  "entries": [
+    {
+      "id": "codex-models",
+      "url": "https://learn.chatgpt.com/docs/models.md",
+      "affects": [
+        "models",
+        "efforts",
+        "guidance"
+      ],
+      "observedAt": "2026-10-21T23:11:31.526Z",
+      "contentHash": "77779d7adf13e05df5bf7fa82088ebbaa647d16682a91cea5cd3cad043474f8e",
+      "hash": "77779d7adf13e05df5bf7fa82088ebbaa647d16682a91cea5cd3cad043474f8e",
+      "status": "reviewed"
+    },
+    {
+      "id": "openai-pricing",
+      "url": "https://developers.openai.com/api/docs/pricing.md",
+      "affects": [
+        "pricing",
+        "cost-routing"
+      ],
+      "observedAt": "2026-10-21T23:11:32.573Z",
+      "contentHash": "129d6019819379a6f30edc0811d4631ddb085dcd4b3b1d0012a945cd1af1bfbf",
+      "hash": "129d6019819379a6f30edc0811d4631ddb085dcd4b3b1d0012a945cd1af1bfbf",
+      "status": "reviewed"
+    },
+    {
+      "id": "liquid-decision-guide",
+      "url": "https://docs.liquid.ai/guides/decision-model-guide.md",
+      "affects": [
+        "decision-schema",
+        "provider"
+      ],
+      "observedAt": "2026-10-21T23:11:05.922Z",
+      "contentHash": "98a38a0998c5a74cf28e647c14877ef2bfe9c8b2c515d8dab5b5b9fbb6968309",
+      "hash": "98a38a0998c5a74cf28e647c14877ef2bfe9c8b2c515d8dab5b5b9fbb6968309",
+      "status": "reviewed"
+    }
+  ],
+  "knowledgeVersion": "2026-10-21.1",
+  "draftHash": "ae1c0badbbf281f4abbc730138516aed9d173a8f337581527bae34ecd2b46c2f"
+}

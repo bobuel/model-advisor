@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "version": "2026-10-10.2",
-  "reviewedAt": "2026-10-10T18:14:46.203Z",
-  "expiresAt": "2026-10-17T17:27:43.181Z",
+  "version": "2026-10-21.1",
+  "reviewedAt": "2026-10-21T23:14:18.249Z",
+  "expiresAt": "2026-10-28T23:13:11.142Z",
   "models": [
     {
       "id": "gpt-6.1-sol",
@@ -135,7 +135,7 @@
       "id": "liquid-guide",
       "url": "https://docs.liquid.ai/guides/decision-model-guide",
       "kind": "provider-methodology",
-      "claim": "d1 supports typed Choice, Score and Noul decisions; its guide calls for evaluation of decision behavior on the user's task."
+      "claim": "d1 provides Choice, Score and Noul for bounded decisions; the guide distinguishes these from open-ended generation."
     }
   ],
   "opinions": [
@@ -485,14 +485,14 @@
   ],
   "research": {
     "schemaVersion": 1,
-    "asOf": "2026-10-10T18:14:46.203Z",
-    "expiresAt": "2026-10-17T18:14:46.203Z",
+    "asOf": "2026-10-21T23:13:11.142Z",
+    "expiresAt": "2026-10-28T23:13:11.142Z",
     "sources": [
       {
-        "id": "codex-model-guidance-20261010",
+        "id": "codex-models",
         "url": "https://learn.chatgpt.com/docs/models.md",
-        "observedAt": "2026-10-10T18:14:46.203Z",
-        "contentHash": "54242416afab5d85506f8b9a24c77eb480d85d4e10285b67450ce66a61eb9fee"
+        "observedAt": "2026-10-21T23:11:31.526Z",
+        "contentHash": "77779d7adf13e05df5bf7fa82088ebbaa647d16682a91cea5cd3cad043474f8e"
       }
     ],
     "findings": [
@@ -506,7 +506,7 @@
         ],
         "citations": [
           {
-            "sourceId": "codex-model-guidance-20261010",
+            "sourceId": "codex-models",
             "section": "Recommended models; Where each model shines"
           }
         ],
@@ -524,7 +524,7 @@
         ],
         "citations": [
           {
-            "sourceId": "codex-model-guidance-20261010",
+            "sourceId": "codex-models",
             "section": "Where each model shines"
           }
         ],
@@ -542,7 +542,7 @@
         ],
         "citations": [
           {
-            "sourceId": "codex-model-guidance-20261010",
+            "sourceId": "codex-models",
             "section": "Recommended models; Where each model shines"
           }
         ],
@@ -562,7 +562,7 @@
         ],
         "citations": [
           {
-            "sourceId": "codex-model-guidance-20261010",
+            "sourceId": "codex-models",
             "section": "Pick a reasoning effort"
           }
         ],
@@ -582,7 +582,7 @@
         ],
         "citations": [
           {
-            "sourceId": "codex-model-guidance-20261010",
+            "sourceId": "codex-models",
             "section": "Pick a reasoning effort"
           }
         ],
@@ -594,7 +594,7 @@
         "id": "effort-extremes",
         "kind": "provider-guidance",
         "topic": "effort",
-        "statement": "Max favors single-task depth; ultra suits meaningful parallel subtasks. Most work needs neither.",
+        "statement": "Max permits more reasoning on difficult single tasks. Most tasks do not need this setting.",
         "models": [
           "gpt-6.1-sol",
           "gpt-6-astra",
@@ -602,26 +602,46 @@
         ],
         "citations": [
           {
-            "sourceId": "codex-model-guidance-20261010",
+            "sourceId": "codex-models",
             "section": "Know when to use Max or Ultra"
           }
         ],
         "limitations": [
-          "Provider advice; task-specific superiority is unmeasured."
+          "Provider guidance, not measured task performance. Luna supports Max but not Ultra."
+        ]
+      },
+      {
+        "id": "effort-ultra",
+        "kind": "provider-guidance",
+        "topic": "effort",
+        "statement": "Ultra uses subagents for work that can be divided into meaningful parts; use it only when the selected model and client support it.",
+        "models": [
+          "gpt-6.1-sol",
+          "gpt-6-astra"
+        ],
+        "citations": [
+          {
+            "sourceId": "codex-models",
+            "section": "Know when to use Max or Ultra"
+          }
+        ],
+        "limitations": [
+          "Luna does not support Ultra. Provider guidance does not establish a quality or latency gain for this task."
         ]
       }
     ],
     "gaps": [
-      "Older models lack substantive model-fit research in this first report.",
+      "Older models lack substantive model-fit research in this report.",
       "Provider guidance is not independent comparative evidence.",
       "Per-task prices and harness-specific speed settings remain unverified.",
-      "Research does not establish outcome quality; real-task evaluations remain necessary."
+      "Research does not establish outcome quality; real-task evaluations remain necessary.",
+      "Liquid guide examples use d1; this service pins d1:free. No new live compatibility or ranking evaluation was performed."
     ],
     "review": {
       "status": "reviewed",
-      "reviewer": "codex-maintainer",
-      "reviewedAt": "2026-10-10T18:14:46.203Z",
-      "draftHash": "93a0e98152b48796f20257d3905017fc8cf0eec3221f666e4093163cf8a5ae50"
+      "reviewer": "codex-maintainer (separate manual source-comparison pass)",
+      "reviewedAt": "2026-10-21T23:14:18.249Z",
+      "draftHash": "ae1c0badbbf281f4abbc730138516aed9d173a8f337581527bae34ecd2b46c2f"
     }
   }
 }

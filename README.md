@@ -10,7 +10,13 @@ The plugin sends a concise task summary and current harness settings to the serv
 
 The first harness is Codex: seven observed models and 40 model–effort combinations. Default speed is the only verified service setting. Cost optimization returns an evidence gap until verified per-task prices exist; subscription tokens are not dollar prices.
 
-## Evidence as of October 10, 2026
+## Research refresh — October 21, 2026
+
+Knowledge version 2026-10-21.1 records a fresh source review and local catalog observation: seven models and 40 supported combinations. Max and Ultra guidance is separated so Luna receives no Ultra recommendation. All three required sources were fetched with TLS verification enabled; the prior Liquid fetch failure no longer blocks this review. Source hashes and the separate maintainer review are recorded in [the review record](maintenance/reviews/2026-10-21.md).
+
+The original synthetic results and live-call counts below retain their dates and scope. This refresh adds no live model evaluation, verified task prices, or hosting. Its seven-day expiry remains enforced.
+
+## Historical evidence as of October 10, 2026
 
 - 136 local tests pass, including 48 task/priority HTTP journeys, a real MCP client, research provenance, the actual LangChain graph with a scripted model, durable quotas and maintenance failures. These controlled provider fixtures test integration, not routing quality.
 - Knowledge version 2026-10-10.2 contains six reviewed findings from official model guidance, with section citations, retrieval date and content hash. These findings now enter the decision payload and returned advice. Catalog availability alone cannot justify a recommendation.
@@ -44,7 +50,7 @@ The installed pilot and this source package are different releases. Publishing a
 
 ## Maintenance and privacy
 
-The source-watcher workflow contains a twice-daily schedule, but it is currently manually disabled. The October 19, 2026 repository audit found one successful manual run on October 10 and no scheduled runs. This records configuration and a manual check, not active unattended maintenance. The existing Codex heartbeat researches substantive changes and follows [the maintainer workflow](maintenance/REVIEW.md). The [LangChain research implementation](maintenance/RESEARCH.md) discovers and reads primary sources and produces a draft for separate review; its live model/search adapters are not yet configured. The first report was researched using Codex web tools. A fetch never silently changes facts or extends freshness. The service uses a pinned knowledge snapshot.
+The source-watcher workflow contains a twice-daily schedule, but it is currently manually disabled. The October 19, 2026 repository audit found one successful manual run on October 10 and no scheduled runs. This records configuration and a manual check, not active unattended maintenance. A separately configured Codex heartbeat can research substantive changes and follow [the maintainer workflow](maintenance/REVIEW.md). The [LangChain research implementation](maintenance/RESEARCH.md) discovers and reads primary sources and produces a draft for separate review; its live model/search adapters are not yet configured. The first report was researched using Codex web tools. A fetch never silently changes facts or extends freshness. The service uses a pinned knowledge snapshot. Current heartbeat enablement and unattended operation were not verified in the October 21 review.
 
 Only synthetic tasks and sanitized summaries belong in this public repo. Do not send secrets or private code in a task summary. The application does not persist request bodies; it uses a five-minute memory cache and a durable date/count quota journal. Requests needing a decision are sent to Liquid. Hosting and provider retention apply separately. Credentials, local inventory, raw traces and runtime databases are excluded from Git and the Docker build.
 
